@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Autorizando INPADP Publisher...</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 flex items-center justify-center min-h-screen text-center font-sans">
+  <div class="bg-white p-8 rounded-2xl shadow-md border border-slate-200 max-w-md">
+    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">✓</div>
+    <h1 class="text-xl font-bold text-slate-800 mb-2">Conectando con TikTok...</h1>
+    <p class="text-slate-500 text-sm mb-4">Redirigiendo de vuelta a tu aplicación local.</p>
+    <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-amber-500 border-t-transparent"></div>
+    <script>
+      const params = window.location.search;
+      window.location.href = "http://localhost:8080/callback" + params;
+    </script>
+  </div>
+</body>
+</html>
